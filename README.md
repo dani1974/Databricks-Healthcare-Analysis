@@ -1,4 +1,4 @@
-# Databricks-Healthcare-Análise
+# Databricks-Healthcare-Análise :star::star::star::star::star:
 
 ## Objetivo
 O objetivo deste trabalho é analisar a qualidade dos hospitais nos EUA usando o conjunto de dados "Informações Gerais do Hospital" disponível no Kaggle. Com base nesta análise, pretendo identificar os principais fatores que influenciam a qualidade dos hospitais e responder a perguntas específicas sobre o desempenho e a infraestrutura hospitalar.
