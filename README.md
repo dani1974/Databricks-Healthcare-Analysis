@@ -1,48 +1,50 @@
-# Databricks-Healthcare-Análise :star::star::star::star::star:
+###Descrição
+Neste trabalho, construí um pipeline de dados utilizando tecnologias na nuvem, especificamente na plataforma Databricks Community Edition. O pipeline envolve a busca, coleta, modelagem, carga e análise dos dados.
 
-## Objetivo
-O objetivo deste trabalho é analisar a qualidade dos hospitais nos EUA usando o conjunto de dados "Informações Gerais do Hospital" disponível no Kaggle. Com base nesta análise, pretendo identificar os principais fatores que influenciam a qualidade dos hospitais e responder a perguntas específicas sobre o desempenho e a infraestrutura hospitalar.
+###Objetivo
+O objetivo deste trabalho é analisar a qualidade dos hospitais nos EUA utilizando um conjunto de dados do Kaggle. Desejo responder às seguintes perguntas:
 
-## As perguntas que desejamos responder são:
-1. Qual é a distribuição da classificação geral dos hospitais?
-2. Existe uma correlação entre o número de leitos e a classificação do hospital?
-3. Qual estado possui os hospitais com as melhores classificações gerais?
+###Qual é a distribuição da classificação geral dos hospitais?
+###Existe uma correlação entre a experiência do paciente e a classificação geral do hospital?
+###Qual estado possui os hospitais com as melhores classificações gerais?
 
-## Dados
-Utilizaremos o conjunto de dados "Informações Gerais do Hospital" disponível no Kaggle.
+###Plataforma
+Utilizei a plataforma Databricks Community Edition para construir o pipeline de dados. Essa plataforma oferece ferramentas poderosas para processamento de dados em larga escala e análise de dados.
 
+###Detalhamento
 
-## Etapas
+###1. Busca pelos dados
+Escolhi o conjunto de dados "Hospital General Information" disponível no Kaggle. Esse conjunto de dados contém informações abrangentes sobre hospitais nos EUA, incluindo classificações e outras métricas relevantes.
 
-### 1. Busca pelos Dados
-Para alcançar os objetivos definidos, escolhi o conjunto de dados "Informações Gerais do Hospital" disponível no Kaggle. Esse conjunto de dados contém informações abrangentes sobre diversos hospitais nos EUA, incluindo classificações, estados, e outras métricas relevantes.
+###2. Coleta
+Os dados foram coletados do Kaggle e armazenados no Databricks. O arquivo CSV foi carregado diretamente na plataforma.
 
-### 2. Coleta
-Os dados foram coletados do Kaggle e armazenados no repositório do GitHub. O arquivo CSV foi carregado diretamente no Databricks a partir do link do GitHub, facilitando a integração e análise subsequente.
+###3. Modelagem
+Construí um modelo de dados em Esquema Estrela para facilitar a análise dos dados. O modelo consiste nas seguintes tabelas:
 
-### 3. Modelagem
-Os dados foram modelados usando um esquema flat, onde cada hospital possui atributos como ID, Nome, Estado, Classificação Geral e Número de Leitos. Essa modelagem simples permite uma análise direta e eficaz dos dados, facilitando a visualização e interpretação dos resultados.
+###Tabela de Fatos:
 
-### 4. Carga
-Os dados transformados foram carregados no formato Parquet no armazenamento da nuvem, utilizando o Databricks. Esse formato otimizado permite uma manipulação eficiente dos dados durante a análise.
+HospitalRatings: Contém as avaliações agregadas dos hospitais.
 
-### 5. Análise
-Nesta etapa, realizei uma análise detalhada da qualidade dos dados e da solução do problema. A análise de qualidade dos dados incluiu a verificação de valores ausentes, inconsistências e outras anomalias. A análise da solução do problema focou em responder às perguntas definidas inicialmente, utilizando ferramentas e técnicas apropriadas para extrair insights valiosos dos dados.
+###Tabelas de Dimensões:
 
-#### Qualidade dos Dados
-A análise descritiva dos dados mostrou que...
+Hospitals: Detalhes dos hospitais.
+Locations: Informações sobre o estado e cidade dos hospitais.
+Time: Datas relacionadas às avaliações e registros.
 
-#### Solução do Problema
-1. **Distribuição da classificação geral dos hospitais:**
-   - A maioria dos hospitais possui uma classificação de 3 estrelas.
-2. **Correlação entre o número de leitos e a classificação do hospital:**
-   - Não foi encontrada uma correlação significativa entre o número de leitos e a classificação do hospital.
-3. **Estado com os hospitais de melhores classificações:**
-   - O estado de Utah possui a maior média de classificação dos hospitais.
+4. Carga
+Carreguei os dados no Data Warehouse do Databricks utilizando um pipeline de ETL (Extração, Transformação e Carga). Documentei os processos de transformação e carga.
 
-## Autoavaliação
-O objetivo inicial foi atingido parcialmente. As principais dificuldades encontradas foram... 
-Para trabalhos futuros, é possível explorar...
+5. Análise
+Dividi a análise em duas partes: qualidade de dados e solução do problema.
+
+a. Qualidade de Dados
+Realizei uma análise da qualidade dos dados para cada atributo do conjunto de dados. Verifiquei a existência de valores ausentes, duplicados ou inconsistentes e apliquei técnicas de limpeza de dados conforme necessário.
+
+b. Solução do Problema
+Respondi às perguntas elencadas nos objetivos, conectando os números obtidos às respostas ao problema a ser solucionado.
+
+Implementação no Databricks
 
 
 
